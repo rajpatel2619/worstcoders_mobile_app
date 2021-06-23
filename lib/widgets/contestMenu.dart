@@ -6,13 +6,13 @@ class ContestMenu extends StatelessWidget {
   final List contests = [
     ["all","All Contests"],
     ["at_coder","AtCoder"],
-    ["code_chef","Codechef"],
-    ["codeforces","Codeforces"],
+    ["code_chef","CodeChef"],
+    ["codeforces","CodeForces"],
     ["cs_academy","CS Academy"],
     ["hacker_rank","HackerRank"],
     ["hacker_earth","HackerEarth"],
-    ["kick_start","KickStart"],
-    ["leet_code","Leetcode"],
+    ["kick_start","Kick Start"],
+    ["leet_code","LeetCode"],
     ["top_coder","TopCoder"],
   ];
 
@@ -20,6 +20,7 @@ class ContestMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: ListView.builder(
+        primary: false,
         itemCount: contests.length,
         scrollDirection: Axis.vertical,
         shrinkWrap: true,

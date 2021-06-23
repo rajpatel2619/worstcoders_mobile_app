@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:worstcoders/widgets/contestMenu.dart';
-import '../palette.dart';
 import 'darkMode.dart';
 
 class MenuDrawer extends StatefulWidget {
@@ -23,33 +22,36 @@ class _MenuDrawerState extends State<MenuDrawer> {
                 fit: BoxFit.cover,
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                // Text(
-                //  "Welcome Ninja !",
-                //   style: TextStyle(
-                //     fontSize: 20,
-                //     color: Palette.primary,
-                //   ),
-                // ),
-                // SizedBox(height: 10),
-              ],
-            ),
+           child: Text(""),
           ),
+          SizedBox(height: 6,),
           Text(
             "Welcome Ninja !",
-            style: TextStyle(color: Colors.green,fontSize: 22,fontWeight: FontWeight.bold),textAlign:TextAlign.center,
+            style: TextStyle(color: Colors.blueAccent,fontSize: 22,fontWeight: FontWeight.bold),textAlign:TextAlign.center,
           ),
+          SizedBox(height: 4,),
           Divider(),
-          SingleChildScrollView(
-            
-            child: ContestMenu(),
+          ExpansionTile(
+          leading: Icon(Icons.computer,color: Colors.teal,),
+          title: Text(
+            "Contests Category",
+            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w500),
           ),
-          
+          children: <Widget>[
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.33,
+              child: ContestMenu())
+              ],
+            ),
+          ],
+        ),
+         
           Divider(),
           ListTile(
-            leading: Icon(Icons.home),
+            leading: Icon(Icons.favorite,color: Colors.red,),
             title: Text('Support Us'),
             onTap: () {
               Navigator.of(context).pushNamed('/support');

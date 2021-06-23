@@ -7,7 +7,6 @@ import 'package:worstcoders/providers/themeProvider.dart';
 import 'package:worstcoders/screens/contest.dart';
 import 'package:worstcoders/screens/home.dart';
 import 'package:worstcoders/screens/support.dart';
-import 'palette.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,7 +47,7 @@ class MyApp extends StatelessWidget {
                 splashIconSize: 140,
                 nextScreen: HomeScreen(),
                 splashTransition: SplashTransition.scaleTransition,
-                backgroundColor: Palette.white,
+                backgroundColor: Colors.black,
               ),
               initialRoute: '/',
               routes: {
